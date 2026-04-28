@@ -6,8 +6,8 @@ read password
 len=${#password}
 echo "Length: $len"
 
-if [ $len -ge 8 ]; then
-
+if [ $len -ge 8 ]
+then
     echo "$password" | grep -q "[0-9]"
     num=$?
 
@@ -17,7 +17,8 @@ if [ $len -ge 8 ]; then
     echo "$password" | grep -q "[a-z]"
     low=$?
 
-    if [ $num -eq 0 ] && [ $up -eq 0 ] && [ $low -eq 0 ]; then
+    if [ $num -eq 0 ] && [ $up -eq 0 ] && [ $low -eq 0 ]
+    then
         echo "Strong Password"
     else
         echo "Weak Password"
